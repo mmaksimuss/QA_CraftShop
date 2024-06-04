@@ -1,127 +1,125 @@
+🛍️ Craft Shop
 
- 🛍️ Craft Shop
+ 📄 Project description
 
- 📄 Описание проекта
+Craft Shop is a web application for buying and selling products. The project allows users to register, log in, add items to cart and place orders.
 
-Craft Shop - это веб-приложение для покупки и продажи товаров. Проект позволяет пользователям регистрироваться, входить в систему, добавлять товары в корзину и оформлять заказы.
+ 🚀 Functionality
 
- 🚀 Функциональность
+- ✅ User registration
+- ✅ Login
+- 🔍 Product search
+- 🛒 Adding items to cart
+- 📦 Placing orders
 
-- ✅ Регистрация пользователя
-- ✅ Вход в систему
-- 🔍 Поиск товаров
-- 🛒 Добавление товаров в корзину
-- 📦 Оформление заказов
+ 🗂️ Project structure
 
- 🗂️ Структура проекта
+The project is divided into the following packages:
 
-Проект разделен на следующие пакеты:
+- `com.craftshop.pages` - Classes for pages (Page Object Model)
+- `com.craftshop.testsSE` - Test classes
+- `com.craftshop.models` - DTO and data models
 
-- `com.craftshop.pages` - Классы для страниц (Page Object Model)
-- `com.craftshop.tests` - Тестовые классы
-- `com.craftshop.models` - DTO и модели данных
+ 🛠️ Installation
 
- 🛠️ Установка
+1. Clone the repository:
 
-1. Склонируйте репозиторий:
+   git clone https://github.com/mmaksimuss/QA_CraftShop.git
 
-   git clone https://github.com/mmaksimuss/QA_Craft_Shop.git
+2. Go to the project directory:
 
-2. Перейдите в директорию проекта:
+   cd craft shop
 
-   cd craft-shop
-
-3. Установите зависимости Maven:
+3. Install Maven dependencies:
 
    mvn clean install
 
 
- 🧪 Запуск тестов
+ 🧪Running tests
 
-Чтобы запустить тесты, выполните следующую команду:
+To run the tests, run the following command:
 
 mvn test
 
 
- 📋 Описание тестов
+ 📋 Description of tests
 
- 📝 Регистрация пользователя
+ 📝User registration
 
-- Тест: Регистрация с валидными данными
-    - Шаги:
-        1. Перейти на страницу регистрации.
-        2. Заполнить все обязательные поля (имя, фамилия, email, пароль).
-        3. Нажать кнопку "Зарегистрироваться".
-        4. Проверить, что регистрация успешна и пользователь перенаправлен на домашнюю страницу.
+- Test: Registration with valid data
+    - Steps:
+        1. Go to the registration page.
+        2. Fill in all required fields (first name, last name, email, password).
+        3. Click the "Register" button.
+        4. Check that registration is successful and the user is redirected to the home page.
 
-- Тест: Регистрация с уже существующим email
-    - Шаги:
-        1. Перейти на страницу регистрации.
-        2. Ввести email, который уже используется.
-        3. Нажать кнопку "Зарегистрироваться".
-        4. Проверить, что отображается сообщение об ошибке.
+- Test: Registration with an existing email
+    - Steps:
+        1. Go to the registration page.
+        2. Enter an email that is already in use.
+        3. Click the "Register" button.
+        4. Check that the error message is displayed.
 
- 🔑 Логин пользователя
+ 🔑 User login
 
-- Тест: Логин с валидными данными
-    - Шаги:
-        1. Перейти на страницу логина.
-        2. Ввести валидные email и пароль.
-        3. Нажать кнопку "Войти".
-        4. Проверить, что логин успешен и пользователь перенаправлен на домашнюю страницу.
+- Test: Login with valid data
+    - Steps:
+        1. Go to the login page.
+        2. Enter a valid email and password.
+        3. Click the "Login" button.
+        4. Check that the login is successful and the user is redirected to the home page.
 
-- Тест: Логин с неверным паролем
-    - Шаги:
-        1. Перейти на страницу логина.
-        2. Ввести валидный email и неверный пароль.
-        3. Нажать кнопку "Войти".
-        4. Проверить, что отображается сообщение об ошибке.
+- Test: Login with incorrect password
+    - Steps:
+        1. Go to the login page.
+        2. Enter a valid email and incorrect password.
+        3. Click the "Login" button.
+        4. Check that the error message is displayed.
 
- 🛒 Добавление товара в корзину
+ 🛒 Adding a product to cart
 
-- Тест: Добавление товара в корзину
-    - Шаги:
-        1. Перейти на страницу товара.
-        2. Нажать кнопку "Добавить в корзину".
-        3. Проверить, что товар добавлен в корзину и количество товаров в корзине обновлено.
+- Test: Adding a product to cart
+    - Steps:
+        1. Go to the product page.
+        2. Click the "Add to cart" button.
+        3. Check that the item has been added to the cart and the quantity of items in the cart has been updated.
 
-- Тест: Удаление товара из корзины
-    - Шаги:
-        1. Перейти в корзину.
-        2. Удалить товар из корзины.
-        3. Проверить, что товар удален и корзина пуста.
+- Test: Removing an item from the cart
+    - Steps:
+        1. Go to cart.
+        2. Remove item from cart.
+        3. Check that the product has been deleted and the cart is empty.
 
- 📦 Оформление заказа
+ 📦 Placing an order
 
-- Тест: Оформление заказа с валидными данными
-    - Шаги:
-        1. Перейти в корзину.
-        2. Нажать кнопку "Оформить заказ".
-        3. Заполнить все обязательные поля (адрес доставки, контактные данные).
-        4. Выбрать способ оплаты.
-        5. Нажать кнопку "Подтвердить заказ".
-        6. Проверить, что заказ оформлен успешно и отображается страница подтверждения заказа.
+- Test: Placing an order with valid data
+    - Steps:
+        1. Go to cart.
+        2. Click the "Place an order" button.
+        3. Fill in all required fields (delivery address, contact information).
+        4. Select a payment method.
+        5. Click the "Confirm order" button.
+        6. Check that the order has been placed successfully and the order confirmation page is displayed.
 
-  🧪 Тестирование юзабилити
+  🧪 Usability testing
 
-Тестирование юзабилити помогает убедиться, что интерфейс приложения удобен и интуитивно понятен для пользователей.
+Usability testing helps ensure that the application interface is user-friendly and intuitive for users.
 
-- Тест: Проверка доступности основных функций
-    - Шаги:
-        1. Открыть главную страницу.
-        2. Убедиться, что кнопки для регистрации и входа в систему видны и доступны.
+- Test: Checking the availability of basic functions
+    - Steps:
+        1. Open the main page.
+        2. Make sure that the registration and login buttons are visible and accessible.
 
-- Тест: Проверка навигации по сайту
-    - Шаги:
-        1. Перейти с главной страницы на страницу категории товаров.
-        2. Убедиться, что навигация по категориям интуитивно понятна и проста в использовании.
-        3. Вернуться на главную страницу и убедиться, что навигация по сайту не вызывает затруднений.
+- Test: Checking site navigation
+    - Steps:
+        1. Go from the main page to the product category page.
+        2. Make sure category navigation is intuitive and easy to use.
+        3. Return to the main page and make sure that navigating the site is easy.
 
-- Тест: Проверка понятности сообщений об ошибках
-    - Шаги:
-        1. Попробовать войти в систему с неправильным паролем.
-        2. Проверить, что сообщение об ошибке четко объясняет проблему и предлагает пользователю понятные действия для ее исправления.
-
+- Test: Checking the clarity of error messages
+    - Steps:
+        1. Try to log in with the wrong password.
+        2. Verify that the error message clearly explains the problem and provides the user with clear steps to correct it.
 
 
 
